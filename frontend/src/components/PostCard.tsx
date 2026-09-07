@@ -1,3 +1,4 @@
+import Markdown from "react-markdown";
 import type { Post } from "../types/Post";
 interface PostCardProps{
     post: Post;
@@ -9,7 +10,8 @@ export default function PostCard({ post, onPublish } : PostCardProps ){
         <div>
             <h1>{post.title}</h1>
             <p>{post.id}</p>
-            <h3>{post.content}</h3>
+            {/* <h3>{post.content}</h3> */}
+            <Markdown>{post.content}</Markdown>
             {post.status === "DRAFT" && <button onClick={() => onPublish(post.id)}>Publish Post</button>}
             {post.status === "PUBLISHED" && <p>Published: {post.publishedAt?.toLocaleString()}</p>}
             <hr />
