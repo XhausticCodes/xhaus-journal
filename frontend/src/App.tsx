@@ -16,7 +16,7 @@ function App() {
     setPosts(prevPosts => 
       prevPosts.map(post => {
         if(post.id === id){
-          return {...post, status: "PUBLISHED"};
+          return {...post, status: "PUBLISHED", publishedAt: new Date()};
         }
         return post;
       })

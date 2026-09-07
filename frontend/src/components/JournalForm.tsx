@@ -27,7 +27,9 @@ export default function JournalForm({ onAddPost } : JournalFormProps){
             id: 1,
             title,
             content,
-            status: "DRAFT"
+            status: "DRAFT",
+            createdAt: new Date(),
+            publishedAt: null
         };
         
         onAddPost(newPost);

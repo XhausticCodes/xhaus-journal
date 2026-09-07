@@ -5,4 +5,6 @@ export interface Post {
     title: string;
     content: string;
     status: PostStatus;
+    createdAt: Date;
+    publishedAt: Date | null;
 }
