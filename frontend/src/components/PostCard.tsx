@@ -1,11 +1,4 @@
-type PostStatus = "DRAFT" | "PUBLISHED";
-
-interface Post{
-    id: number;
-    title: string;
-    content: string;
-    status: PostStatus;
-}
+import type { Post } from "../types/Post";
 interface PostCardProps{
     post: Post;
     onPublish: (id: number) => void;

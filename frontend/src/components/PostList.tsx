@@ -1,12 +1,5 @@
 import PostCard from "./PostCard";
-
-type PostStatus = "DRAFT" | "PUBLISHED";
-interface Post{
-    id: number;
-    title: string;
-    content: string;
-    status: PostStatus  ;
-}
+import type { Post } from "../types/Post";
 interface PostListProps{
     posts: Post[];
     onPublish: (id: number) => void;

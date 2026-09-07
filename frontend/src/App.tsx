@@ -3,14 +3,7 @@ import './App.css'
 import Header from './components/Header'
 import JournalForm from './components/JournalForm'
 import PostList from './components/PostList'
-
-type PostStatus = "DRAFT" | "PUBLISHED";
-interface Post{
-    id: number;
-    title: string;
-    content: string;
-    status: PostStatus  ;
-}
+import type { Post } from './types/Post'
 
 function App() {
   const[posts, setPosts] = useState<Post[]>([]);

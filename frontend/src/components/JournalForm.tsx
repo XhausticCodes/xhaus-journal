@@ -1,12 +1,5 @@
 import { useState } from "react";
-
-type PostStatus = "DRAFT" | "PUBLISHED";
-interface Post{
-    id: number;
-    title: string;
-    content: string;
-    status: PostStatus  ;
-}
+import type { Post } from "../types/Post";
 
 interface JournalFormProps{
     onAddPost: (post: Post) => void;
